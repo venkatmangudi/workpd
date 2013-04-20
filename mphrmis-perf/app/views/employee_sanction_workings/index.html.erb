@@ -12,7 +12,7 @@
       <th>Designation (English)</th>
       <th>Designation (Hindi)</th>
       <th>Working Status</th>
-      <th>Wrong Data ?</th>
+      <!-- <th>Wrong Data ?</th> -->
       <th>Add Data</th>
     </tr>
   </thead>
@@ -24,7 +24,7 @@
           <td><%= empsancwork.Designation_English%></td>
           <td><%= empsancwork.Designation_hindi%></td>
           <td><%= empsancwork.status_name%></td>
-          <td><%= check_box_tag "empsancwork_employee_ids[]", empsancwork.employee_id %></td>
+          <!-- <td><%= check_box_tag "empsancwork_employee_ids[]", empsancwork.employee_id %></td> -->
           <!-- <td><%= check_box_tag "empsancwork_employee_ids[]", empsancwork.employee_id %></td> -->
           <td><%= link_to t('.new', :default => t("helpers.links.new")),
             new_performaone_url(:id => empsancwork.employee_id, :hospital_id => empsancwork.hospital_id),
@@ -34,7 +34,7 @@
   </tbody>
 </table><br><br>
 <!-- <a type="button" class="btn" style="width:25%;">Add Data for Selected Employees</a> -->
-<a type="button" class="btn" style="width:25%;">Invalidate Selected Employees</a>
+<!-- <a type="button" class="btn" style="width:25%;">Invalidate Selected Employees</a> -->
 
 <script>
   $('#addnew span').text('Add Monthly Doctor Performance Data');

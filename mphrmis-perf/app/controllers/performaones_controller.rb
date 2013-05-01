@@ -13,18 +13,20 @@ class PerformaonesController < InheritedResources::Base
 		        format.html { render action: "new" }
 		        format.json { render json: @performaone.errors, status: :unprocessable_entity }
 		      end
-    		end
+      	    end
+
+    end
 
     def index
 		@performaones = Performaone.find_all_by_hospital_id(params[:hospital_id])
-
-		            respond_to do |format|
+	            respond_to do |format|
                     format.html
-                    format.csv { render text: @performaones.to_csv }
-                    format.xls # { send_data @performaones.find_all_by_hospital_id(params[:hospital_id])to_csv(col_sep: '\t') }
+                    format.js
+                    format.csv { render text: @performaone.to_csv }                    
+                    format.xls 
                 end
-        end
-	end	
+       
+	end
 
 
 
